@@ -1,6 +1,7 @@
 package modell;
 
-public class Ing extends Ruha{
+public class Ing extends Ruha {
+
     private double szinIntenzitas;
 
     public Ing(String tulNev) {
@@ -15,6 +16,11 @@ public class Ing extends Ruha{
     public void setSzin(double szinIntenzitas) {
         this.szinIntenzitas = szinIntenzitas;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        String ruha = super.toString();
+        return ruha+"\n\tIng{" + "szinIntenzitas=" + szinIntenzitas + '}';
+    }
+
 }
