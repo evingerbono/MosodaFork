@@ -1,5 +1,6 @@
 package main;
 
+import modell.Ing;
 import modell.Mosoda;
 import modell.Ruha;
 
@@ -15,17 +16,23 @@ public class MosodaProgram {
         mosoda = new Mosoda(4);
         mosoda.bevesz(new Ruha("Péter"));
         mosoda.bevesz(new Ruha("Pál"));
-        mosoda.bevesz(new Ruha("Petra"));
+        mosoda.bevesz(new Ing("Petra"));
+        mosoda.bevesz(new Ing("Piroska"));
         
-        System.out.println("mosás ELŐTT:");
+        System.out.println("--- mosoda ruhái mosás ELŐTT:");
         mosodaRuhai();
         
-        System.out.println("mosás UTÁN:");
+        System.out.println("--- mosoda ruhái 1. mosás UTÁN:");
+        mosoda.mos();
+        mosodaRuhai();
+        
+        System.out.println("--- mosoda ruhái 2. mosás UTÁN:");
         mosoda.mos();
         mosodaRuhai();
         
         mosoda.kiad("Pál");
-        System.out.println("Pál elvitte a ruháját:");
+        mosoda.kiad("Petra");
+        System.out.println("--- a mosodában maradt ruhák:");
         mosodaRuhai();
     }
     
